@@ -1,0 +1,404 @@
+@import "_variables";
+/* INDEX
+-------------------------------------------------- */
+
+/* NavBar Styles */
+
+.fixed-top {
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: $main-text-color;
+    .navbar-nav {
+        .nav-link {
+            color: $white;
+            &:hover {
+                color: $primary-brand-color;
+            }
+        }
+    }
+    &.nav-shadow {
+        box-shadow: 0px -1px 11px 4px $main-text-color;
+    }
+}
+
+ul.desktop-search-wrapper {
+    li {
+        form {
+            position: relative;
+        }
+        #txtDesktopSearch {
+            height: 30px;
+            font-size: 16px;
+            display: inline-block;
+            border: none;
+            outline: none;
+            color: $grey-f1;
+            padding-right: 30px;
+            width: 0px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            z-index: 3;
+            transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+            cursor: pointer;
+            &:focus {
+                width: 198px;
+                z-index: 1;
+                border-bottom: 1px solid $grey-bbb;
+                cursor: text;
+                padding-top: 0px;
+                padding-left: 8px;
+            }
+            &:focus {
+                &:hover {
+                    border-bottom: 1px solid $grey-bbb;
+                }
+            }
+        }
+        .search-items {
+            float: left;
+            margin-top: 4px;
+        }
+        a {
+            color: $grey-f1;
+            padding: 0 8px;
+            &:hover {
+                color: $primary-brand-color;
+            }
+        }
+    }
+}
+
+.mobile-searchbar {
+    .naanji-navbar-input {
+        padding: 12px 30px 12px 27px;
+        border-radius: 2px 0 0 2px;
+        border: 1px solid $grey-ccc;
+        outline: 0 none;
+        font-size: 16px;
+        background: $grey-f1;
+        &:focus {
+            border-color: primary-brand-color;
+        }
+    }
+    .naanji-navbar-button {
+        background-color: primary-brand-color;
+        border: 1px solid primary-brand-color;
+        border-radius: 0 2px 2px 0;
+        color: $grey-56;
+        padding: 6px 0;
+        height: 48px;
+        cursor: pointer;
+    }
+}
+
+/* INDEX
+-------------------------------------------------- */
+
+/* Carousel base class */
+
+.carousel {
+    .carousel-item {
+        height: 32rem;
+        background-color: #777;
+        .carousel-item>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 32rem;
+        }
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .carousel-indicators {
+        li {
+            background-color: $white;
+            &.active {
+                background-color: $primary-brand-color;
+            }
+        }
+    }
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+
+.marketing .col-lg-4,
+.marketing .col-lg-3 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: 400;
+}
+
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 5rem 0;
+    /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+
+p.index-content-margin {
+    font-style: italic;
+    font-size: 13px;
+}
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
+
+.featurette-sub-title {
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+.promise-container {
+    background: url(../../Images/bg-02.jpg) fixed;
+    padding-top: 54px;
+    padding-bottom: 44px;
+    .index-online-promise {
+        .promise-wrapper {
+            a {
+                display: inline-block !important;
+                padding-left: 0px !important;
+                border: 2px solid $grey-f1;
+                width: 90px;
+                height: 90px;
+                color: $grey-f1;
+                font-size: 52px;
+                padding-top: 2px;
+                position: relative;
+                text-align: center;
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -ms-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    position: absolute;
+                    left: 2px;
+                    right: 2px;
+                    bottom: 2px;
+                    top: 2px;
+                    content: "";
+                    -webkit-transition: .5s ease-in-out;
+                    -moz-transition: .5s ease-in-out;
+                    -ms-transition: .5s ease-in-out;
+                    -o-transition: .5s ease-in-out;
+                    transition: .5s ease-in-out;
+                    z-index: -1;
+                }
+            }
+            p.promise-title {
+                font-size: 18px;
+                margin-top: 18px;
+                margin-bottom: 0;
+                color: $grey-f1;
+                font-weight: bold;
+                span{
+                    color: $primary-brand-color;
+                    font-size: 16px;
+                }
+            }
+            p.promise-slogan {
+                font-size: 14px;
+                color: $grey-f1 !important;
+            }
+            &:hover {
+                a {
+                    background-color: $primary-brand-color;
+                    color: $white;
+                    -webkit-transition: .5s ease-in-out;
+                    -moz-transition: .5s ease-in-out;
+                    -ms-transition: .5s ease-in-out;
+                    -o-transition: .5s ease-in-out;
+                    transition: .5s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.prod-slick-wrapper {
+    .slick-img-ad {
+        width: 95%;
+        float: left;
+    }
+    .row {
+        width: 100%;
+        margin: 0;
+        div {
+            padding: 0;
+            p.prod-wrapper-title {
+                font-size: 24px;
+                background-color: $grey-f1;
+                margin-bottom: 0;
+                padding: 18px 45px;
+                color: $main-text-color;
+                text-transform: capitalize;
+                a.link-explore {
+                    color: $brand-google-plus;
+                }
+            }
+        }
+    }
+    .ad-slick-container {
+        background-color: $grey-f1;
+        padding: 20px 28px 40px;
+        width: 100%;
+        margin: 0;
+        a.prod-wrapper {
+            background-color: $white;
+            display: block;
+            padding: 4px 8px;
+            margin-bottom: 0 !important;
+            border: 1px solid $white;
+            text-align: center;
+            width: 92%;
+            img {
+                padding: 8px;
+            }
+            h5 {
+                color: $main-text-color;
+            }
+            p.price-wrapper {
+                color: $main-text-color;
+                margin-bottom: 4px;
+                span.original-price {
+                    text-decoration: line-through;
+                    color: $primary-brand-color;
+                }
+                span.disc-price {
+                    font-weight: bold;
+                    color: $brand-blue;
+                }
+            }
+            p.prod-slogan {
+                color: $main-text-color;
+                font-size: 14px;
+            }
+            &:hover {
+                border: 1px solid $primary-brand-color;
+            }
+        }
+        .slick-arrow {
+            position: absolute;
+            top: 40%;
+            border: none;
+            z-index: 1;
+            font-size: 0;
+            width: 42px;
+            height: 68px;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            opacity: 0.5;
+            cursor: pointer;
+            &.slick-next {
+                right: 0;
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23e22d61'%2F%3E%3C%2Fsvg%3E");
+            }
+            &.slick-prev {
+                left: 0;
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23e22d61'%2F%3E%3C%2Fsvg%3E");
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &:hover {
+            .slick-arrow {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*
+.slick-prev:before,
+.slick-next:before {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 40px;
+    line-height: 1;
+    color: red;
+    opacity: 0.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:before {
+    content: "\f053";
+}
+
+[dir="rtl"] .slick-prev:before {
+    content: "\f054";
+}
+
+[dir="rtl"] .slick-next {
+    left: -10px;
+    top: 70px;
+    right: auto;
+}
+
+.slick-next:before {
+    content: "\f054";
+}
+
+[dir="rtl"] .slick-next:before {
+    content: "\f053";
+}
+*/
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .index-content-margin {
+        margin-top: 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-searchbar {
+        display: none;
+    }
+    main{
+        margin-top: 30px;
+    }
+}

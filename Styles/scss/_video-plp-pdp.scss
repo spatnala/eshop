@@ -1,0 +1,132 @@
+.nav-tabs-wrapper {
+    display: block;
+    overflow: hidden;
+    height: calc(1.5rem + 1rem + 2px);
+    /** 1.5 is font-size, 1 is padding top and bottom, 2 is border width top and bottom */
+    position: relative;
+    z-index: 1;
+    margin-bottom: -1px;
+    text-align: center;
+    .nav-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        border-bottom: 0;
+        display: inline-block;
+    }
+    .nav-item {
+        margin-bottom: 0;
+        display: inline-block;
+    }
+    .nav-link {
+        white-space: nowrap;
+        padding: 8px 30px;
+        color: $main-text-color;
+        font-weight: 500;
+        border-radius: 0;
+        &.active {
+            color: $primary-brand-color;
+            border-color: $primary-brand-color $primary-brand-color $white;
+        }
+        &:hover{
+            border-color: $primary-brand-color $primary-brand-color $grey-ddd;
+        }
+    }
+    .dragscroll:active,
+    .dragscroll:active a {
+        cursor: -webkit-grabbing;
+    }
+}
+
+.nav-tabs-wrapper-border {
+    display: block;
+    width: 100%;
+    border-top: 1px solid $grey-ddd;
+}
+
+.tab-pane {
+    padding: 1rem;
+}
+.vdo-title{
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+.vdo-slogan{
+    text-align: center;
+    margin-bottom: 26px;
+}
+.vod-plp-item {
+    background-color: #fff;
+    padding: 14px 14px 10px 14px;
+    max-width: 32% !important;
+    margin-left: 1%;
+    margin-bottom: 24px;
+    .vdo-plp-title {
+        margin-top: 8px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        color: $primary-brand-color;
+        i {
+            float: right;
+            font-size: 18px;
+            padding-top: 6px;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 5px 20px -3px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/**************PDP PAGE STYLES START**************/
+.pdp-vdo-title{
+    margin-top: 18px;
+    margin-bottom: 14px;
+    color: $primary-brand-color;
+    letter-spacing: 1.25px;
+    img{
+        width: 34px;
+        margin-top: -6px;
+    }
+}
+
+.vdo-pdp-desc-container{
+    padding: 0 14px;
+    margin-top: 36px;
+    margin-bottom: 46px;
+    .vdo-pdp-desc-wrapper{
+        background-color: $white;
+        padding: 18px 20px 12px 30px;
+        ul.pdp-ingredients{
+            list-style: none;
+            padding: 0;
+            li{
+                margin-bottom: 8px;
+                &.ing-title{
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 1.25px;
+                }
+            }
+        }
+        ul.pdp-share-icons{
+            list-style: none;
+            padding: 0;
+            li{
+                float: left;
+                margin-right: 14px;
+                a{
+                    font-size: 20px;
+                    color: $primary-brand-color;
+                }
+            }
+        }
+    }
+}
+
+.sticky-ad-wrapper{
+    &.affix{
+        position:fixed;
+        top:0;
+        right:0;
+    }
+}
