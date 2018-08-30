@@ -263,6 +263,24 @@ p.index-content-margin {
   .prod-slick-wrapper .ad-slick-container:hover .slick-arrow {
     opacity: 1; }
 
+.vdp-play-img {
+  position: relative; }
+  .vdp-play-img .vdo-play-btn {
+    position: absolute;
+    background-color: #333;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    margin: 0 auto;
+    width: 80px;
+    padding: 12px 26px;
+    border-radius: 10px; }
+  .vdp-play-img:hover .vdo-play-btn {
+    background-color: #e22d61; }
+
 /*
 .slick-prev:before,
 .slick-next:before {
@@ -310,7 +328,7 @@ p.index-content-margin {
 
 @media (min-width: 62em) {
   .index-content-margin {
-    margin-top: 4rem; } }
+    /*margin-top: 4rem;*/ } }
 
 @media (min-width: 768px) {
   .mobile-searchbar {
