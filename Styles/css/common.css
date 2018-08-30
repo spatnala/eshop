@@ -241,14 +241,15 @@ p.index-content-margin {
       border: 1px solid #e22d61; }
   .prod-slick-wrapper .ad-slick-container .slick-arrow {
     position: absolute;
-    top: 40%;
+    top: 0;
     border: none;
     z-index: 1;
     font-size: 0;
     width: 42px;
-    height: 68px;
+    height: 100%;
     background-repeat: no-repeat;
-    background-color: #fff;
+    background-color: #ccc;
+    background-position: center;
     opacity: 0.5;
     cursor: pointer; }
     .prod-slick-wrapper .ad-slick-container .slick-arrow.slick-next {
